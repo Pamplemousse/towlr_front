@@ -3,6 +3,8 @@ div(layout='vertical', layout-fill='')
 
   md-content
     section.jumbotron
+      h1
+        a.btn(ng-href='#home') Goto links list
       h1 &apos;Allo, &apos;Allo!
       p.lead
       img(src='assets/images/yeoman.png', alt="I'm Yeoman")
@@ -17,7 +19,6 @@ div(layout='vertical', layout-fill='')
           .caption
           h3 {{awesomeThing.title}}
           p {{awesomeThing.description}}
-          p
           a(ng-href='{{awesomeThing.url}}') {{awesomeThing.url}}
 
   footer

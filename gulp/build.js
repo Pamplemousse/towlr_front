@@ -20,9 +20,9 @@ gulp.task('styles', ['wiredep', 'injector:css:preprocessor'], function () {
 gulp.task('injector:css:preprocessor', function () {
   return gulp.src('src/app/index.scss')
     .pipe($.inject(gulp.src([
-        'src/{app,components}/**/*.scss',
+        'src/{app,components,assets}/**/*.scss',
         '!src/app/index.scss',
-        '!src/app/vendor.scss' 
+        '!src/app/vendor.scss'
       ], {read: false}), {
       transform: function(filePath) {
         filePath = filePath.replace('src/app/', '');

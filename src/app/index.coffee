@@ -4,6 +4,9 @@ angular.module "towlr", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngR
       .when "/",
         templateUrl: "app/main/main.html"
         controller: "MainCtrl"
+      .when "/home",
+        templateUrl: "app/home/home.html"
+        controller: "HomeCtrl"
       .otherwise
         redirectTo: "/"
 

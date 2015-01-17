@@ -1,0 +1,30 @@
+div(layout='vertical', layout-fill='')
+  header(ng-include="'components/navbar/navbar.html'")
+
+  md-content
+    section.jumbotron
+      h1 I want to
+      div(layout='row', layout-margin='', layout-padding='')
+        div(flex='25')
+        div(flex='50')
+          div(layout='row')
+            md-button.md-button-colored.media-button
+              i.fa.fa-lg.fa-book
+              |  read
+            md-button.md-button-colored.media-button
+              i.fa.fa-lg.fa-music
+              |  listen
+            md-button.md-button-colored.media-button
+              i.fa.fa-lg.fa-film
+              |  watch
+
+  md-content
+    .techs(layout-align='center')
+      md-card(ng-repeat="link in links")
+        .thumbnail
+          h3 {{link.title}}
+          a(ng-href='{{link.url}}') {{link.url}}
+
+  //- footer
+  //-   md-toolbar(layout='row', layout-align='center center')
+  //-     p With &hearts;
