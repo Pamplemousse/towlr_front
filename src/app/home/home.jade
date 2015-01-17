@@ -1,9 +1,9 @@
 div(layout='vertical', layout-fill='')
-  header(ng-include="'components/navbar/navbar.html'")
 
   md-content
     section.jumbotron
-      i.fa.fa-3x.fa-navicon(style="float:left; margin-top: 16px;")
+      i.fa.fa-3x.fa-navicon(style="float:left; margin-top: 16px;", ng-click='toggleNavMenu()')
+
       h1(ng-click='reset()') I want to
       div(layout='row', layout-margin='', layout-padding='')
         div(flex='25')

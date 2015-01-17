@@ -7,6 +7,10 @@ angular.module "towlr"
     $scope.reset = ->
       $scope.search = {'tag':'', 'text': ''}
 
+    $scope.toggleNavMenu = (callingElement)->
+      alert('not yet implemented')
+      console.log('not yet implemented')
+
     $scope.search = {'tag':'', 'text': ''}
     $scope.links = [
       {

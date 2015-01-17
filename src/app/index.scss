@@ -54,6 +54,10 @@ section.jumbotron {
   }
 }
 
+.hidden {
+  display : none;
+}
+
 // injector
 @import 'src/assets/styles/_variables.scss';
 @import 'src/assets/styles/modules/form.scss';
