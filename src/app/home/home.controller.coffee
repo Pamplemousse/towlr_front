@@ -4,6 +4,9 @@ angular.module "towlr"
       $scope.search.tag = verb
       console.log($scope.search)
 
+    $scope.reset = ->
+      $scope.search = {'tag':'', 'text': ''}
+
     $scope.search = {'tag':'', 'text': ''}
     $scope.links = [
       {

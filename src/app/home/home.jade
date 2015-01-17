@@ -3,7 +3,8 @@ div(layout='vertical', layout-fill='')
 
   md-content
     section.jumbotron
-      h1(ng-click='filterBy("")') I want to
+      i.fa.fa-3x.fa-navicon(style="float:left; margin-top: 16px;")
+      h1(ng-click='reset()') I want to
       div(layout='row', layout-margin='', layout-padding='')
         div(flex='25')
         div(flex='50')
@@ -20,7 +21,8 @@ div(layout='vertical', layout-fill='')
       div(layout='row', layout-margin='', layout-padding='')
         div(flex='25')
         div(flex='50')
-          input(type='text', layout-fill='', placeholder='wireframe for quick search field', ng-model='search.text')
+          div(layout='row')
+            input(type='text', placeholder='quick search field...', ng-model='search.text', layout-fill='').search
 
   md-content
     .techs(layout-align='center')
