@@ -3,24 +3,28 @@ div(layout='vertical', layout-fill='')
 
   md-content
     section.jumbotron
-      h1 I want to
+      h1(ng-click='filterBy("")') I want to
       div(layout='row', layout-margin='', layout-padding='')
         div(flex='25')
         div(flex='50')
           div(layout='row')
-            md-button.md-button-colored.media-button
+            md-button.md-button-colored.media-button(ng-click='filterBy("read")')
               i.fa.fa-lg.fa-book
               |  read
-            md-button.md-button-colored.media-button
+            md-button.md-button-colored.media-button(ng-click='filterBy("listen")')
               i.fa.fa-lg.fa-music
               |  listen
-            md-button.md-button-colored.media-button
+            md-button.md-button-colored.media-button(ng-click='filterBy("watch")')
               i.fa.fa-lg.fa-film
               |  watch
+      div(layout='row', layout-margin='', layout-padding='')
+        div(flex='25')
+        div(flex='50')
+          input(type='text', layout-fill='', placeholder='wireframe for quick search field', ng-model='search.text')
 
   md-content
     .techs(layout-align='center')
-      md-card(ng-repeat="link in links")
+      md-card(ng-repeat="link in links | filter:{tag: search.tag, title: search.text}")
         .thumbnail
           h3 {{link.title}}
           a(ng-href='{{link.url}}') {{link.url}}
