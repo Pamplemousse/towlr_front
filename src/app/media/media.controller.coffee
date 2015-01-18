@@ -1,15 +1,13 @@
 angular.module "towlr"
-  .controller "HomeCtrl", ($scope) ->
+  .controller "MediaCtrl", ($scope) ->
     $scope.filterBy = (verb)->
       $scope.search.tag = verb
-      console.log($scope.search)
+      return
 
     $scope.reset = ->
       $scope.search = {'tag':'', 'text': ''}
+      return
 
-    $scope.toggleNavMenu = (callingElement)->
-      alert('not yet implemented')
-      console.log('not yet implemented')
 
     $scope.search = {'tag':'', 'text': ''}
     $scope.links = [

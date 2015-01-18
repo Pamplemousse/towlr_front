@@ -12,7 +12,7 @@ describe('controllers', function(){
   it('should define at least 3 links', inject(function($controller) {
     expect(scope.links).toBeUndefined();
 
-    $controller('HomeCtrl', {
+    $controller('MediaCtrl', {
       $scope: scope
   	});
 
