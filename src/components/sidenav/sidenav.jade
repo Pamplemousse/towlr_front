@@ -1,0 +1,10 @@
+div(layout='row', ng-controller='SideNavCtrl')
+  md-sidenav.md-sidenav-left(md-component-id='left')
+    div(layout='column')
+      md-button(ng-controller='SideNavCtrl', ng-click='toggleMenu()')
+        i.fa.fa-3x.fa-arrow-circle-left
+      md-button(href='#/') About
+      md-button(href='#/') Contact
+      md-button(href='#/') Home
+  //- md-sidenav.md-sidenav-right(md-component-id='right', md-is-locked-open="$media('min-width: 333px')")
+  //-   | Right Nav!

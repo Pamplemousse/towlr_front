@@ -1,17 +1,10 @@
+div(ng-include="'components/sidenav/sidenav.html'")
+
 div(layout='column', layout-fill='')
 
-  //- div(layout='row', ng-controller='MyController')
-  //-   md-sidenav.md-sidenav-left(md-component-id='left')
-  //-     | Left Nav!
-  //-   md-content
-  //-     | Center Content
-  //-     md-button(ng-click='openLeftMenu()')
-  //-       | Open Left Menu
-  //-   md-sidenav.md-sidenav-right(md-component-id='right', md-is-locked-open="$media('min-width: 333px')")
-  //-     | Right Nav!
-
   section.jumbotron
-    i.fa.fa-3x.fa-navicon(style="float:left; margin-top: 16px;", ng-click='toggleNavMenu()')
+    md-button(ng-controller='SideNavCtrl', ng-click='toggleMenu()', style="float:left;")
+      i.fa.fa-3x.fa-navicon
 
     h1(ng-click='reset()') I want to
     div(layout='row', layout-margin='', layout-padding='')

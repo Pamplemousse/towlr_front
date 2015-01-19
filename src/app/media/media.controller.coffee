@@ -1,9 +1,4 @@
 angular.module "towlr"
-  # .controller "MyController", ($scope) ->
-  #   $scope.openLeftMenu = ->
-  #     $mdSidenav('left').toggle()
-  #     return
-
   .controller "MediaCtrl", ($scope) ->
     $scope.filterBy = (verb)->
       $scope.search.tag = verb
