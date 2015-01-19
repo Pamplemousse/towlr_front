@@ -1,28 +1,35 @@
-div(layout='vertical', layout-fill='')
+div(layout='column', layout-fill='')
 
-  md-content
-    section.jumbotron
-      i.fa.fa-3x.fa-navicon(style="float:left; margin-top: 16px;", ng-click='toggleNavMenu()')
+  //- div(layout='row', ng-controller='MyController')
+  //-   md-sidenav.md-sidenav-left(md-component-id='left')
+  //-     | Left Nav!
+  //-   md-content
+  //-     | Center Content
+  //-     md-button(ng-click='openLeftMenu()')
+  //-       | Open Left Menu
+  //-   md-sidenav.md-sidenav-right(md-component-id='right', md-is-locked-open="$media('min-width: 333px')")
+  //-     | Right Nav!
 
-      h1(ng-click='reset()') I want to
-      div(layout='row', layout-margin='', layout-padding='')
-        div(flex='25')
-        div(flex='50')
-          div(layout='row')
-            md-button.md-button-colored.media-button(ng-click='filterBy("read")')
-              i.fa.fa-lg.fa-book
-              |  read
-            md-button.md-button-colored.media-button(ng-click='filterBy("listen")')
-              i.fa.fa-lg.fa-music
-              |  listen
-            md-button.md-button-colored.media-button(ng-click='filterBy("watch")')
-              i.fa.fa-lg.fa-film
-              |  watch
-      div(layout='row', layout-margin='', layout-padding='')
-        div(flex='25')
-        div(flex='50')
-          div(layout='row')
-            input(type='text', placeholder='quick search field...', ng-model='search.text', layout-fill='').search
+  section.jumbotron
+    i.fa.fa-3x.fa-navicon(style="float:left; margin-top: 16px;", ng-click='toggleNavMenu()')
+
+    h1(ng-click='reset()') I want to
+    div(layout='row', layout-margin='', layout-padding='')
+      div(flex='25')
+      div(flex='50')
+        div(layout='row')
+          md-button.md-button-colored.media-button(ng-click='filterBy("read")')
+            i.fa.fa-lg.fa-book
+            |  read
+          md-button.md-button-colored.media-button(ng-click='filterBy("listen")')
+            i.fa.fa-lg.fa-music
+            |  listen
+          md-button.md-button-colored.media-button(ng-click='filterBy("watch")')
+            i.fa.fa-lg.fa-film
+            |  watch
+        input(type='text', placeholder='quick search field...', ng-model='search.text').search
+        //- div(layout='row', layout-margin='', layout-padding='')
+          input(type='text', placeholder='quick search field...', ng-model='search.text', layout-fill='').search
 
   md-content
     .techs(layout-align='center')
