@@ -3,13 +3,13 @@ div(ng-include="'components/sidenav/sidenav.html'")
 div(layout='column', layout-fill='')
 
   section.jumbotron
-    md-button(ng-controller='SideNavCtrl', ng-click='toggleMenu()', style="float:left;")
+    md-button(ng-controller='SideNavCtrl', ng-click='toggleMenu()').menuNav
       i.fa.fa-3x.fa-navicon
 
     h1(ng-click='reset()') I want to
     div(layout='row', layout-margin='', layout-padding='')
-      div(flex='25')
-      div(flex='50')
+      div(flex='20')
+      div(flex='60')
         div(layout='row')
           md-button.md-button-colored.media-button(ng-click='filterBy("read")')
             i.fa.fa-lg.fa-book

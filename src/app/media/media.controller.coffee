@@ -1,7 +1,10 @@
 angular.module "towlr"
   .controller "MediaCtrl", ($scope) ->
     $scope.filterBy = (verb)->
-      $scope.search.tag = verb
+      if $scope.search.tag == verb
+        $scope.search.tag = ''
+      else
+        $scope.search.tag = verb
       return
 
     $scope.reset = ->
