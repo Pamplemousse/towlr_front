@@ -1,7 +1,7 @@
 div(ng-include="'components/sidenav/sidenav.html'")
 
-section.media-header-container
-  div.media-header-content
+div.media-header-container
+  div(layout='column').media-header-content
     h1.media-header-title I want to
     div(layout='row')
       div(flex='10')
@@ -16,8 +16,10 @@ section.media-header-container
           md-button.md-button-colored.media-button(ng-click='filterBy("watch");')
             i.fa.fa-lg.fa-film
             |  watch
+    div.media-header-bottom I don't care, show me everything !
+    div.chevron-bottom
 
-section(id='content' style='height:100%;')
+div(id='content' style='height:100%;')
   div(layout='row', layout-margin='', layout-padding='')
     div(flex='20')
     div(flex='60')
@@ -27,4 +29,3 @@ section(id='content' style='height:100%;')
       .thumbnail
         h3 {{link.title}}
         a(ng-href='{{link.url}}') {{link.url}}
-

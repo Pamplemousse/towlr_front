@@ -1,1 +1,9 @@
+@mixin transform($degrees_X_axis, $degrees_Y_axis) {
+  -webkit-transform: skew($degrees_X_axis, $degrees_Y_axis);
+  -moz-transform   : skew($degrees_X_axis, $degrees_Y_axis);
+  -ms-transform    : skew($degrees_X_axis, $degrees_Y_axis);
+  -o-transform     : skew($degrees_X_axis, $degrees_Y_axis);
+  transform        : skew($degrees_X_axis, $degrees_Y_axis);
+}
+
 $margin : 16px;

@@ -5,6 +5,7 @@
   text-align       : center;
   background-color : $blue_300;
   color            : lighten($black, 13%);
+  font-family      : $ubuntu-condensed;
 }
 
 .media-header-content {
@@ -13,7 +14,41 @@
 }
 
 .media-header-title {
-  font-size     : 5em;
-  margin-top    : $margin;
-  margin-bottom : $margin * 2;
+  font-size : 5em;
+  margin    : $margin 0 ($margin * 3) 0;
+}
+
+.media-header-bottom {
+  margin-top : $margin * 4;
+}
+
+.chevron-bottom {
+  position      : relative;
+  // text-align    : center;
+  // padding       : 12px;
+  // margin-bottom : 6px;
+  height        : 4px;
+  width         : 100px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: lighten($black, 88%);
+    @include transform(0deg, 6deg)
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    background: lighten($black, 88%);
+    @include transform(0deg, -6deg);
+  }
 }
