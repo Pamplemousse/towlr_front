@@ -7,6 +7,6 @@ angular.module "towlr", ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngR
       .when "/media",
         templateUrl: "app/media/media.html"
         controller: "MediaCtrl"
+        reloadOnSearch: false
       .otherwise
         redirectTo: "/"
-

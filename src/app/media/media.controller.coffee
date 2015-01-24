@@ -1,20 +1,58 @@
 angular.module "towlr"
-  .controller "MediaCtrl", ($scope) ->
+  .controller "MediaCtrl", ($scope, $location, $anchorScroll) ->
     $scope.filterBy = (verb)->
       if $scope.search.tag == verb
         $scope.search.tag = ''
       else
         $scope.search.tag = verb
+      $scope.scrollTo("content")
       return
 
-    $scope.reset = ->
-      $scope.search = {'tag':'', 'text': ''}
+    $scope.scrollTo = (id) ->
+      $location.hash(id)
+      $anchorScroll()
       return
+
+    # $scope.reset = ->
+    #   $scope.search = {'tag':'', 'text': ''}
+    #   return
 
 
     $scope.search = {'tag':'', 'text': ''}
     $scope.links = [
       {
+        'title' : 'The Jester dynamic',
+        'url' : 'http://www.sans.org/reading-room/whitepapers/attacking/jester-dynamic-lesson-asymmetric-unmanaged-cyber-warfare-33889',
+        'tag' : 'read'
+      },{
+        'title' : 'Hold-up en finance',
+        'url' : 'http://olivier.godechot.free.fr/hopfichiers/Godechot_Hold-up.pdf',
+        'tag' : 'read'
+      },{
+        'title' : 'La valeur travail',
+        'url' : 'http://www.credoc.fr/pdf/Rech/C305.pdf',
+        'tag' : 'read'
+      },{
+        'title' : 'Bent - Magic Love [Chill Out]',
+        'url' : 'https://www.youtube.com/watch?v=VUtA0qUFrtY',
+        'tag' : 'listen'
+      },{
+        'title' : 'The Jester dynamic',
+        'url' : 'http://www.sans.org/reading-room/whitepapers/attacking/jester-dynamic-lesson-asymmetric-unmanaged-cyber-warfare-33889',
+        'tag' : 'read'
+      },{
+        'title' : 'Hold-up en finance',
+        'url' : 'http://olivier.godechot.free.fr/hopfichiers/Godechot_Hold-up.pdf',
+        'tag' : 'read'
+      },{
+        'title' : 'La valeur travail',
+        'url' : 'http://www.credoc.fr/pdf/Rech/C305.pdf',
+        'tag' : 'read'
+      },{
+        'title' : 'Bent - Magic Love [Chill Out]',
+        'url' : 'https://www.youtube.com/watch?v=VUtA0qUFrtY',
+        'tag' : 'listen'
+      },{
         'title' : 'The Jester dynamic',
         'url' : 'http://www.sans.org/reading-room/whitepapers/attacking/jester-dynamic-lesson-asymmetric-unmanaged-cyber-warfare-33889',
         'tag' : 'read'

@@ -1,36 +1,32 @@
 div(ng-include="'components/sidenav/sidenav.html'")
 
-div(layout='column', layout-fill='')
+//- div(layout='column', layout-fill='')
 
-  section.jumbotron
-    md-button(ng-controller='SideNavCtrl', ng-click='toggleMenu()').menuNav
-      i.fa.fa-3x.fa-navicon
-
-    h1(ng-click='reset()') I want to
+section(style='height:100%; width: 100%; display: table;').jumbotron
+  div(style='display: table-cell; vertical-align: middle;')
+    h1 I want to
     div(layout='row', layout-margin='', layout-padding='')
-      div(flex='20')
-      div(flex='60')
+      div(flex='10')
+      div(flex='80')
         div(layout='row')
-          md-button.md-button-colored.media-button(ng-click='filterBy("read")')
+          md-button.md-button-colored.media-button(ng-click='filterBy("read");')
             i.fa.fa-lg.fa-book
             |  read
-          md-button.md-button-colored.media-button(ng-click='filterBy("listen")')
+          md-button.md-button-colored.media-button(ng-click='filterBy("listen");')
             i.fa.fa-lg.fa-music
             |  listen
-          md-button.md-button-colored.media-button(ng-click='filterBy("watch")')
+          md-button.md-button-colored.media-button(ng-click='filterBy("watch");')
             i.fa.fa-lg.fa-film
             |  watch
-        input(type='text', placeholder='quick search field...', ng-model='search.text').search
-        //- div(layout='row', layout-margin='', layout-padding='')
-          input(type='text', placeholder='quick search field...', ng-model='search.text', layout-fill='').search
 
-  md-content
-    .techs(layout-align='center')
-      md-card(ng-repeat="link in links | filter:{tag: search.tag, title: search.text}")
-        .thumbnail
-          h3 {{link.title}}
-          a(ng-href='{{link.url}}') {{link.url}}
+div(id='content' style='height:100%;')
+  div(layout='row', layout-margin='', layout-padding='')
+    div(flex='20')
+    div(flex='60')
+      input(type='text', placeholder='quick search field...', ng-model='search.text').search
+  .techs(layout-align='center')
+    md-card(ng-repeat="link in links | filter:{tag: search.tag, title: search.text}")
+      .thumbnail
+        h3 {{link.title}}
+        a(ng-href='{{link.url}}') {{link.url}}
 
-  //- footer
-  //-   md-toolbar(layout='row', layout-align='center center')
-  //-     p With &hearts;
