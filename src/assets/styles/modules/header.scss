@@ -1,0 +1,19 @@
+.media-header-container {
+  height           : 100%;
+  width            : 100%;
+  display          : table;
+  text-align       : center;
+  background-color : $blue_300;
+  color            : lighten($black, 13%);
+}
+
+.media-header-content {
+  display        : table-cell;
+  vertical-align : middle;
+}
+
+.media-header-title {
+  font-size     : 5em;
+  margin-top    : $margin;
+  margin-bottom : $margin * 2;
+}

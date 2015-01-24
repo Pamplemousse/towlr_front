@@ -1,11 +1,9 @@
 div(ng-include="'components/sidenav/sidenav.html'")
 
-//- div(layout='column', layout-fill='')
-
-section(style='height:100%; width: 100%; display: table;').jumbotron
-  div(style='display: table-cell; vertical-align: middle;')
-    h1 I want to
-    div(layout='row', layout-margin='', layout-padding='')
+section.media-header-container
+  div.media-header-content
+    h1.media-header-title I want to
+    div(layout='row')
       div(flex='10')
       div(flex='80')
         div(layout='row')
@@ -19,7 +17,7 @@ section(style='height:100%; width: 100%; display: table;').jumbotron
             i.fa.fa-lg.fa-film
             |  watch
 
-div(id='content' style='height:100%;')
+section(id='content' style='height:100%;')
   div(layout='row', layout-margin='', layout-padding='')
     div(flex='20')
     div(flex='60')
