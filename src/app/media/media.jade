@@ -16,8 +16,10 @@ div.media-header-container
           md-button.md-button-colored.media-button(ng-click='filterBy("watch");')
             i.fa.fa-lg.fa-film
             |  watch
-    div.media-header-bottom I don't care, show me everything !
-    div.chevron-bottom
+    div(ng-click='scrollTo("content")').media-header-bottom
+      div I don't care, show me everything !
+      div.chevron-container
+        div.chevron-bottom
 
 div(id='content' style='height:100%;')
   div(layout='row', layout-margin='', layout-padding='')

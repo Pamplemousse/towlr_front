@@ -22,13 +22,15 @@
   margin-top : $margin * 4;
 }
 
+.chevron-container {
+  margin-left : calc((100% -  #{$chevron-width}) / 2);
+  margin-top  : $margin / 2;
+}
+
 .chevron-bottom {
   position      : relative;
-  // text-align    : center;
-  // padding       : 12px;
-  // margin-bottom : 6px;
-  height        : 4px;
-  width         : 100px;
+  height        : 2px;
+  width         : $chevron-width;
 
   &:before {
     content: '';
@@ -37,7 +39,7 @@
     left: 0;
     height: 100%;
     width: 50%;
-    background: lighten($black, 88%);
+    background: lighten($black, 46%);
     @include transform(0deg, 6deg)
   }
 
@@ -48,7 +50,7 @@
     right: 0;
     height: 100%;
     width: 50%;
-    background: lighten($black, 88%);
+    background: lighten($black, 46%);
     @include transform(0deg, -6deg);
   }
 }
