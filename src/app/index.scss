@@ -45,7 +45,7 @@ section.jumbotron {
   flex-flow: row wrap;
 
   md-card {
-    width: 30%;
+    width: 40%;
 
     img.pull-right {
       float: right;
@@ -63,7 +63,7 @@ section.jumbotron {
 @import 'src/assets/styles/_fonts.scss';
 @import 'src/assets/styles/_variables.scss';
 @import 'src/assets/styles/generic/buttons.scss';
+@import 'src/assets/styles/generic/links.scss';
 @import 'src/assets/styles/generic/search.scss';
-@import 'src/assets/styles/modules/form.scss';
 @import 'src/assets/styles/modules/header.scss';
 // endinjector

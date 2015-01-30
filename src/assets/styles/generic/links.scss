@@ -1,0 +1,14 @@
+.links {
+  display: flex;
+  flex-flow: row wrap;
+
+  md-card {
+    width: 40%;
+  }
+
+  margin-top : $margin;
+}
+
+.links_top_marged {
+  margin-top : 107 + $margin;
+}
