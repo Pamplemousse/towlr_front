@@ -5,22 +5,25 @@ angular.module "towlr"
         $scope.search.tag = ''
       else
         $scope.search.tag = verb
-      $scope.scrollTo("content")
+      $scope.scrollTo('content')
       return
 
     $scope.scrollTo = (id) ->
       $location.hash(id)
       $anchorScroll()
+      # $scope.scroll = $scope.windowHeight
+      console.log($scope.scroll)
       return
 
-    # $scope.reset = ->
-    #   $scope.search = {'tag':'', 'text': ''}
-    #   return
+    $scope.resetFilter = ->
+      $scope.search = {'tag':'', 'text': ''}
+      $scope.scrollTo('top')
+      return
 
     $scope.scroll = 0
 
     $scope.windowHeight = $window.innerHeight
-    $scope.search = {'tag':'', 'text': ''}
+    $scope.search = { 'tag':'', 'text': '' }
     $scope.links = [
       {
         'title' : 'The Jester dynamic',

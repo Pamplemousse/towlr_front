@@ -11,3 +11,9 @@
   position : absolute;
   left     : ($margin / 2);
 }
+
+.back_to_top {
+  position : fixed;
+  bottom   : $margin;
+  right    : $margin;
+}

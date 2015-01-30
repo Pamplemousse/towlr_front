@@ -1,6 +1,6 @@
 div(ng-include="'components/sidenav/sidenav.html'")
 
-div.media-header-container
+#top.media-header-container
   div(layout='column').media-header-content
     h1.media-header-title I want to
     div(layout='row')
@@ -21,7 +21,7 @@ div.media-header-container
       div.chevron-container
         div.chevron-bottom
 
-div(id='content' style='height:100%;')
+#content(style='height:100%;')
   div(layout='row', layout-margin='', layout-padding='', ng-class='{ fixed_search: scroll > {{windowHeight}} }').search
     div(flex='20')
     div(flex='60')
@@ -31,3 +31,5 @@ div(id='content' style='height:100%;')
       .thumbnail
         h3 {{link.title}}
         a(ng-href='{{link.url}}') {{link.url}}
+
+  i(ng-click='resetFilter()' ng-class='{ back_to_top: scroll >= {{windowHeight}} }').fa.fa-3x.fa-times-circle
