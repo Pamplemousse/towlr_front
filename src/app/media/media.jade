@@ -22,10 +22,10 @@ div.media-header-container
         div.chevron-bottom
 
 div(id='content' style='height:100%;')
-  div(layout='row', layout-margin='', layout-padding='')
+  div(layout='row', layout-margin='', layout-padding='', ng-class='{fixed_search: scroll > {{windowHeight}} }').search
     div(flex='20')
     div(flex='60')
-      input(type='text', placeholder='quick search field...', ng-model='search.text').search
+      input(type='text', placeholder='quick search field...', ng-model='search.text', scroll-position='scroll').search_field
   .techs(layout-align='center')
     md-card(ng-repeat="link in links | filter:{tag: search.tag, title: search.text}")
       .thumbnail

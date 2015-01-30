@@ -1,5 +1,17 @@
-.search {
+.search_field {
   margin  : 16px 8px;
   padding : 1px 8px;
   width   : calc(100% - 16px);
+}
+
+.fixed_search {
+  position : fixed;
+  top      : 0;
+  width    : 100%;
+  margin   : 0;
+}
+
+.search {
+  background-color : $blue_400;
+  margin   : 0;
 }
